@@ -44,3 +44,18 @@ To deploy to github pages, use `npm run deploy`.  This will run the deploy scrip
 ## License
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Fgeojson.io.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fmapbox%2Fgeojson.io?ref=badge_large)
+
+
+## Docker
+
+### Build Image
+
+```bash
+docker build -t pejmans21/geojson.io:latest -f .docker/Dockerfile .
+```
+
+### Usage
+
+```bash
+docker run -p 8080:8080 --name geojson -d pejmans21/geojson.io:latest
+```
